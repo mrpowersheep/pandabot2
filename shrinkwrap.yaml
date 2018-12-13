@@ -13,9 +13,9 @@ dependencies:
   random-puppy: 1.1.0
   request: 2.88.0
   snekfetch: 4.0.4
-  superagent: 3.8.3
+  superagent: 4.0.0
   youtube-search: 1.1.3
-  ytdl-core: 0.27.1
+  ytdl-core: 0.28.1
 packages:
   /@types/node/8.10.37:
     dev: false
@@ -410,12 +410,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
-  /debug/3.2.6:
+  /debug/4.1.0:
     dependencies:
       ms: 2.1.1
     dev: false
     resolution:
-      integrity: sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
+      integrity: sha512-heNPJUJIqC+xB6ayLAMHaIrmN9HKa7aQO8MGqKpvCA+uJYVcvR6l5kgdrhRuwPFHU7P5/A1w0BjByPHwpfTDKg==
   /decamelize/1.2.0:
     dev: false
     engines:
@@ -1210,15 +1210,15 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==
-  /m3u8stream/0.4.2:
+  /m3u8stream/0.6.2:
     dependencies:
-      miniget: 1.5.0
+      miniget: 1.5.1
       sax: 1.2.4
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-VZeobA83iQdd2TY12K2DNLuUmE1XNjN660SYU9s6A4kP7ZhFEp/bQPUpOWU2EbkFYwsonyaFT+RxLDr1OhPTRA==
+      integrity: sha512-WsuM2bd5pPN80xvfrB+1DZqr4M7+kJl8byi6+ZCy6cmVjEiHhmr/desN53Ngsa6Hs13kYumeVgT4wL0oIJ+v6g==
   /map-obj/1.0.1:
     dev: false
     engines:
@@ -1277,19 +1277,19 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-KI1+qOZu5DcW6wayYHSzR/tXKCDC5Om4s1z2QJjDULzLcmf3DvzS7oluY4HCTrc+9FiKmWUgeNLg7W3uIQvxtQ==
-  /mime/1.6.0:
+  /mime/2.4.0:
     dev: false
     engines:
-      node: '>=4'
+      node: '>=4.0.0'
     hasBin: true
     resolution:
-      integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
-  /miniget/1.5.0:
+      integrity: sha512-ikBcWwyqXQSHKtciCcctu9YfPbFYZ4+gbHEmE0Q8jzcTYQg5dHCr3g2wwAZjPoJfQVXZq6KXAjpXOTf5/cjT7w==
+  /miniget/1.5.1:
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-RbRCj2m8Q/arS1nExuMB8qO4QavCpvfetQR+HVCeHGiFJGOryPn8u0z4WrIx9AAIDYFDVcFhQsRYvSY+UA5HJQ==
+      integrity: sha512-KJ3AyIVZ76QuWAq43BWjkK+jLdhxhy3s4tsdg9Je91+cIFkeOSW2VEj2lSeKw50CPu1eCCkSbiQEBKL36mpA5w==
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.11
@@ -1578,6 +1578,12 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
+  /qs/6.6.0:
+    dev: false
+    engines:
+      node: '>=0.6'
+    resolution:
+      integrity: sha512-KIJqT9jQJDQx5h5uAVPimw6yVg2SekOKu959OCtktD3FjzbpvaPr8i4zzg07DOMz+igA4W/aNM7OV8H37pFYfA==
   /random-animals/1.0.3:
     dependencies:
       snekfetch: 3.6.4
@@ -1672,6 +1678,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-tQtKA9WIAhBF3+VLAseyMqZeBjW0AHJoxOtYqSUZNJxauErmLbVm2FW1y+J/YA9dUrAC39ITejlZWhVIwawkKw==
+  /readable-stream/3.0.6:
+    dependencies:
+      inherits: 2.0.3
+      string_decoder: 1.2.0
+      util-deprecate: 1.0.2
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-9E1oLoOWfhSXHGv6QlwXJim7uNzd9EVlWK+21tCU9Ju/kR0/p2AZYPz4qSchgO8PlLIH4FpZYfzwS+rEksZjIg==
   /redent/1.0.0:
     dependencies:
       indent-string: 2.1.0
@@ -1928,6 +1944,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
+  /string_decoder/1.2.0:
+    dependencies:
+      safe-buffer: 5.1.2
+    dev: false
+    resolution:
+      integrity: sha512-6YqyX6ZWEYguAxgZzHGL7SsCeGx3V2TtOTqZz1xSTSWnqsbWwbptafNyvf/ACquZUXV3DANr5BDIwNYe1mN42w==
   /stringstream/0.0.6:
     dev: false
     resolution:
@@ -1970,23 +1992,22 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ebs7RFbdBPGOvbwNcDodHa7FEF0=
-  /superagent/3.8.3:
+  /superagent/4.0.0:
     dependencies:
       component-emitter: 1.2.1
       cookiejar: 2.1.2
-      debug: 3.2.6
-      extend: 3.0.2
+      debug: 4.1.0
       form-data: 2.3.3
       formidable: 1.2.1
       methods: 1.1.2
-      mime: 1.6.0
-      qs: 6.5.2
-      readable-stream: 2.3.6
+      mime: 2.4.0
+      qs: 6.6.0
+      readable-stream: 3.0.6
     dev: false
     engines:
-      node: '>= 4.0'
+      node: '>= 6.0'
     resolution:
-      integrity: sha512-GLQtLMCoEIK4eDv6OGtkOoSMt3D+oq0y3dsxMuYuDvaNUvuT8eFBuLmfR0iYYzHC1e8hpzC6ZsxbuP6DIalMFA==
+      integrity: sha512-qaGDf+QUYxgMYdJBWCezHnc3UjrCUwxm5bCfxBhTXI5BbCluVzmVNYzxvCw1jP9PXmwUZeOW2yPpGm9fLbhtFg==
   /supports-color/2.0.0:
     dev: false
     engines:
@@ -2208,17 +2229,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-vAULVh/MduXQDxJjoJB6doxql3kCvz/9WVx402elP/JzpSmIa8RFo4Rew6Xk7WnO7JmoPcFpe0rZ+gtaoBbhIw==
-  /ytdl-core/0.27.1:
+  /ytdl-core/0.28.1:
     dependencies:
       html-entities: 1.2.1
-      m3u8stream: 0.4.2
-      miniget: 1.5.0
+      m3u8stream: 0.6.2
+      miniget: 1.5.1
       sax: 1.2.4
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-NH+AUb598cJK/FJQ17PLlSrv9NNwUOioP2cJ71S3fQgqKSFBobvurnpzhfkQWRQVLj4gve5H6ZupOAD60zZ1Xg==
+      integrity: sha512-HByrbZTLLizyuvzsvGXMT3H4jVhYECg7+qTlEJ3jOr82h8lFuSzugAKx3bs0K5P4TKB4HQlAhOM8ymqimf+RcA==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -2237,6 +2258,6 @@ specifiers:
   random-puppy: ^1.1.0
   request: ^2.88.0
   snekfetch: ^4.0.4
-  superagent: ^3.8.3
+  superagent: ^4.0.0
   youtube-search: ^1.1.3
-  ytdl-core: ^0.27.1
+  ytdl-core: ^0.28.1

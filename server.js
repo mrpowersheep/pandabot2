@@ -381,6 +381,12 @@ if(cmd === `${prefix}dogs`){
 
 
 }
+   
+if(cmd === `${prefix}premium`){
+
+message.reply("To get PandaBot Premium visit this website: https://www.patreon.com/pandabott")
+
+}
 })
 
 bot.on("message", async message => {
@@ -432,7 +438,7 @@ channel.send(`${message.author} sent some mail: **${dMessage}**`)
   
 message.author.send(`Yo, ${message.author} you have sent your mail, you will get reply here soon!`)
   
-}
+} 
 })
 
 bot.on("message", async message => {
