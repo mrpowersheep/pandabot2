@@ -267,7 +267,7 @@ msg.delete(5000)
 })
 .catch
 
-message.author.send("**These are the commands for the bot!** ```!help, !report, !invitebot, !unmute, !tempmute, !invitebot, !help, !command, !dm, !report, !warn, !addrole, !removerole, !serverinfo, !clear and !support``` **THERE WILL BE MORE COMMANDS ADDED SOON!**")
+message.author.send("**These are the commands for the bot!** ```!help, !report, !invitebot, !unmute, !tempmute, !invitebot, !help, !command, !dm, !report, !warn, !addrole, !removerole, !serverinfo, !clear, !support and !premium``` **THERE WILL BE MORE COMMANDS ADDED SOON!**")
   
 }
   
@@ -279,7 +279,7 @@ msg.delete(5000)
 })
 .catch
   
-message.author.send("This is what each command does: `!kick: Kicks a user` `!ban: Bans a user` `!mute: Mutes a user` `!unmute: Unmute a user` `!tempmute: Temporarily mutes a user for a certain amount of time` `!warn: Warns a user for a specific reason` `!report: Reports a user` `!dm: DM's a user` `!addrole: Gives a user a role!` `!removerole: Removes a role off a user!` `!invitebot: Sends link to invite PandaBot to server` `!help: Tells you every command that the bot has` `!serverinfo: Sends info about server` `!clear: Clears an amount of messages between 2 and 100` `!support: Sends invite to the bot support server!`")
+message.author.send("This is what each command does: `!kick: Kicks a user` `!ban: Bans a user` `!mute: Mutes a user` `!unmute: Unmute a user` `!tempmute: Temporarily mutes a user for a certain amount of time` `!warn: Warns a user for a specific reason` `!report: Reports a user` `!dm: DM's a user` `!addrole: Gives a user a role!` `!removerole: Removes a role off a user!` `!invitebot: Sends link to invite PandaBot to server` `!help: Tells you every command that the bot has` `!serverinfo: Sends info about server` `!clear: Clears an amount of messages between 2 and 100` `!support: Sends invite to the bot support server!` `!premium: Sends link to get PandaBot Premium")
 
 }
   
