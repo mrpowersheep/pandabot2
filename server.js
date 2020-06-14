@@ -501,6 +501,27 @@ let guild = bot.guilds.get('')
     setTimeout(()=>{biggest.send('This server now has Pandabot Premium, to see the commands use !phelp.');}, Math.random()*20000);
     
 }
+  
+if(cmd === `${prefix}pmessage`){
+
+if (message.author.id !== '420431836523528194') return message.reply("You can't use that command!")
+let guild = bot.guilds.get('')
+    let biggest;
+    const channels = guild.channels.filter((c) => c.permissionsFor(guild.me).has('SEND_MESSAGES') && c.type === 'text');
+    channels.forEach(channel => {
+        if (!biggest) return biggest = channel;
+        if (biggest.messages.size < channel.messages.size) biggest = channel;
+    });
+    setTimeout(()=>{biggest.send('This server now has Pandabot Premium, to see the commands use !phelp.');}, Math.random()*20000);
+
+}
+  
+ if(cmd === `${prefix}yopremium`){
+
+message.reply("To get PandaBot Premium visit this website: https://www.patreon.com/pandabott")
+
+}
+  
 })
 
        
