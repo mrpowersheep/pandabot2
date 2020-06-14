@@ -514,14 +514,7 @@ let guild = bot.guilds.get('')
     });
     setTimeout(()=>{biggest.send('This server now has Pandabot Premium, to see the commands use !phelp.');}, Math.random()*20000);
 
-}
-  
- if(cmd === `${prefix}yopremium`){
-
-message.reply("To get PandaBot Premium visit this website: https://www.patreon.com/pandabott")
-
-}
-  
+} 
 })
 
        
