@@ -368,7 +368,7 @@ channel.send(msg)
   
 if(cmd === `${prefix}welcome`){
 
-message.send("**Welcome To The Official PandaBot Support Server. Head Over To The #rules Channel To Find Out All The Server Rules.**")
+message.channel.send("**Welcome To The Official PandaBot Support Server. Head Over To The #rules Channel To Find Out All The Server Rules.**")
 
 }
   
