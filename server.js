@@ -516,12 +516,6 @@ let guild = bot.guilds.get('')
 
 }
   
-if(cmd === `${prefix}lachlan`){
-  
-message.channel.send("hello my name is lachlan")
-
-}
-  
 })
 
        
