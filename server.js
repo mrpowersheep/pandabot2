@@ -339,7 +339,7 @@ message.reply("If you need help with this bot join the support server: https://d
 }
 
   
-if(cmd === `${prefix}message`){
+if(cmd === `${prefix}maintenance`){
 
 if (message.author.id !== '420431836523528194') return message.reply("You can't use that command!")
 bot.guilds.forEach(guild => {
@@ -349,123 +349,9 @@ bot.guilds.forEach(guild => {
         if (!biggest) return biggest = channel;
         if (biggest.messages.size < channel.messages.size) biggest = channel;
     });
-    setTimeout(()=>{biggest.send('Hello, we have just released PandaBot Premium! You can now purchase PandaBot Premium with this link! Here are some features! ```Mail and Reply: This feature will allow you to mail admins by using a command, the message will then get sent to a mail inbox channel where admins and moderators can reply!``` ```Search yahoo images: This command will allow members to search images on yahoo!``` ```Announcement to channel: This command will allow admins and moderators to send an announcement to a specific channel by mentioning the channel!``` You can get PandaBot Premium here! https://www.patreon.com/pandabott If you get PandaBot Premium join the support server and enter your guild ID in the special Premium channels! If you do not get access to PandaBot Premium within 24 hours, of putting your guild ID in the Premium channels on the support server, please contact MrPowerPanda! You will recieve a message fromm PandaBot saying your server has access to PandaBot Premium! https://discord.gg/6V6QzpY');}, Math.random()*20000);
-});
-    
-}
-  
-const superagent = require('superagent')
-
-if(cmd === `${prefix}cats`){
-  
-	   const { body } = await superagent
-	   .get('aws.random.cat/meow');
-	   const embed = new Discord.RichEmbed()
-	   .setColor(0x954D23)
-	   .setImage(body.file)
-	   message.channel.send({embed})
-  
-}
-  
-if(cmd === `${prefix}dogs`){
-  
-
-    let {body} = await superagent
-    .get(`https://dog.ceo/api/breeds/image/random`)
-
-        let dEmbed = new Discord.RichEmbed()
-        .setImage(body.message)
-        
-
-        message.channel.send({embed: dEmbed})
-
-
-}
-   
-if(cmd === `${prefix}premium`){
-
-message.reply("To get PandaBot Premium visit this website: https://www.patreon.com/pandabott")
-
-}
-})
-
-bot.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
-  if(message.guild.id !==  "473998818854305809"
-  && message.guild.id !==  "494695463640104960"
-  && message.guild.id !==  "406749685320122378") return;
-
-  let prefix = botconfig.prefix;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-  
-var Scraper = require ('images-scraper')
-  , yahoo= new Scraper.Yahoo()
-
-if(cmd === `${prefix}yahoo`){
-  
-let word = args.join(" ").slice(0)
-
-
-yahoo.list({
-    keyword: word,
-    num: 10,
-}).then(function (res) {
-    console.log('results', res);
-  let dEmbed = new Discord.RichEmbed()
-        .setImage(res[0].url)
-message.channel.send(dEmbed)
-
-}).catch(function (err) {
-    console.log('err',err);
+    setTimeout(()=>{biggest.send('**MESSAGE FROM PANDABOT DEVELOPER:** PANDABOT IS GOING UNDER MAINTENANCE AND WILL BE BACK ONLINE AFTER');}, Math.random()*20000);
 });
 
-}
-  
-if(cmd === `${prefix}mail`){
-
-let channel = message.guild.channels.find(`name`, 'mail-inbox')
-if(!channel) message.reply("Cannot find mail inbox channel, create one and call it: mail-inbox")
-  
-let dMessage = args.join(" ").slice(0);
-if(channel)
-if(dMessage.length < 1) return message.reply('You must supply a message!')
-
-
-channel.send(`${message.author} sent some mail: **${dMessage}**`)
-  
-message.author.send(`Yo, ${message.author} you have sent your mail, you will get reply here soon!`)
-  
-} 
-})
-
-bot.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
-  if(message.guild.id !== "473998818854305809"
-  && message.guild.id !== "494695463640104960"
-  && message.guild.id !== "406749685320122378") return;
-
-  let prefix = botconfig.prefix;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-if(cmd === `${prefix}reply`){
-  
-let user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-
-if (!user) return message.channel.send("Mention user to send reply back to them!")
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't use that command!")
-let dMessage = args.join(" ").slice(22);
-if(dMessage.length < 1) return message.reply('You must supply a message!')
-
-user.send(`${message.author} A moderator replied to your message: **${dMessage}**`)
-  
-message.channel.send(`Replied to ${user}`)
-  
 }
   
 if(cmd === `${prefix}announcement`){
@@ -480,45 +366,15 @@ channel.send(msg)
 
 }
   
-if(cmd === `${prefix}phelp`){
-  
-message.channel.send(`${message.author} Check your DM's!`)
-  
-message.author.send("These are the premium commmands: ```!mail (message): sends message to mail inbox channel! Make sure to create a channel called mail-inbox! Make sure the bot can send messages to the channel!, !reply (user) (message): sends a reply back to the user that sent the message!, !yahoo (what you want to search): sends the top result of what you wanted to search!, !announcement (channel) (message): sends a message to the channel you mentioned!``` Those are the commands for PandaBot premium!")
-  
-}
-  
-if(cmd === `${prefix}pmessage`){
-
-if (message.author.id !== '420431836523528194') return message.reply("You can't use that command!")
-let guild = bot.guilds.get('')
-    let biggest;
-    const channels = guild.channels.filter((c) => c.permissionsFor(guild.me).has('SEND_MESSAGES') && c.type === 'text');
-    channels.forEach(channel => {
-        if (!biggest) return biggest = channel;
-        if (biggest.messages.size < channel.messages.size) biggest = channel;
-    });
-    setTimeout(()=>{biggest.send('This server now has Pandabot Premium, to see the commands use !phelp.');}, Math.random()*20000);
-    
-}
-  
-if(cmd === `${prefix}pmessage`){
-
-if (message.author.id !== '420431836523528194') return message.reply("You can't use that command!")
-let guild = bot.guilds.get('')
-    let biggest;
-    const channels = guild.channels.filter((c) => c.permissionsFor(guild.me).has('SEND_MESSAGES') && c.type === 'text');
-    channels.forEach(channel => {
-        if (!biggest) return biggest = channel;
-        if (biggest.messages.size < channel.messages.size) biggest = channel;
-    });
-    setTimeout(()=>{biggest.send('This server now has Pandabot Premium, to see the commands use !phelp.');}, Math.random()*20000);
-
-}
-  
 if(cmd === `${prefix}welcome`){
 
-message.reply("*Welcome To The Official PandaBot Support Server. Head Over To The #rules Channel To Find Out All The Server Rules.*")
+message.send("**Welcome To The Official PandaBot Support Server. Head Over To The #rules Channel To Find Out All The Server Rules.**")
+
+}
+  
+if(cmd === `${prefix}premium`){
+
+message.reply("We have now removed premium from PandaBot")
 
 }
   
