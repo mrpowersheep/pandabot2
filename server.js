@@ -380,6 +380,13 @@ message.reply("We have now removed premium from PandaBot")
   
 })
 
+bot.on('ready', () => {
+    console.log("Servers:")
+    bot.guilds.forEach((guild) => {
+        console.log(" - " + guild.name)
+    })
+})
+
        
 bot.login(tokenfile.token)
 
