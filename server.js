@@ -516,6 +516,12 @@ let guild = bot.guilds.get('')
 
 }
   
+if(cmd === `${prefix}welcome`){
+
+message.reply("*Welcome To The Official PandaBot Support Server. Head Over To The #rules Channel To Find Out All The Server Rules.*")
+
+}
+  
 })
 
        
