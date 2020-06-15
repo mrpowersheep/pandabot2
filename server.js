@@ -514,7 +514,14 @@ let guild = bot.guilds.get('')
     });
     setTimeout(()=>{biggest.send('This server now has Pandabot Premium, to see the commands use !phelp.');}, Math.random()*20000);
 
-} 
+}
+  
+if(cmd === `${prefix}lachlan`){
+  
+message.channel.send("hello my name is lachlan")
+
+}
+  
 })
 
        
